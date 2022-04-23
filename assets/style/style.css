@@ -24,7 +24,16 @@ thead {
     color: var(--color-light);
 }
 
-thead P:nth-child(2) {
+tfoot button {
+    background-color: ##d3d3d3;
+    text-transform: uppercase;
+    border: 1px solid var(--colord-dark);
+    padding: 3px 10px;
+    border-radius: 3px;
+
+}
+
+thead p:nth-child(2) {
     font-size: 2em;
     padding-top: 1em;
 }
