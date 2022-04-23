@@ -1,28 +1,42 @@
 :root {
     --br-radius: 5px;
+    --colord-dark: #dbdbdb;
+    --color-norm: #ececec;
+    --color-light: #f3f3f3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {}
 
 table {
     width: 100%;
-    max-width: 900px;
+    max-width: 680px;
     margin: auto;
     border-collapse: collapse;
 }
 
 th,
 td {
-    background-color: #7887ab;
+    padding: 10px;
+}
 
+thead {
+    color: var(--color-light);
+}
+
+thead P:nth-child(2) {
+    font-size: 2em;
+    padding-top: 1em;
 }
 
 thead th:first-child {
     border-radius: 5px 0 0 0;
+    background-color: #7887ab;
 }
 
 thead th:last-child {
     border-radius: 0 5px 0 0;
+    background-color: #061539;
 }
 
 tfoot th:first-child {
@@ -31,4 +45,40 @@ tfoot th:first-child {
 
 tfoot th:last-child {
     border-bottom-right-radius: var(--br-radius);
+}
+
+tbody tr:nth-child(odd) td:nth-child(odd),
+tfoot th:nth-child(odd) {
+    background-color: var(--colord-dark);
+}
+
+tbody tr:nth-child(odd) td:nth-child(even),
+tbody tr:nth-child(even) td:nth-child(odd),
+tfoot th:nth-child(even) {
+    background-color: var(--color-norm);
+}
+
+tbody tr:nth-child(even) td:nth-child(even) {
+    background-color: var(--color-light);
+}
+
+tbody td:not(td:first-child) {
+    text-align: center;
+    width: 18%;
+}
+
+tbody td:first-child {
+    padding-left: 2em;
+}
+
+thead th:nth-child(2) {
+    background-color: #4f628e;
+}
+
+thead th:nth-child(3) {
+    background-color: #2e4172;
+}
+
+thead th:nth-child(4) {
+    background-color: #162955;
 }
